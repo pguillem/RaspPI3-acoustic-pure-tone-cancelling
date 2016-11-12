@@ -8,9 +8,12 @@ The program will detect any idle audio card interfaces and start scanning the sp
 In order to focus the program on the dominant pure-tone in the spectrum, click the "INICIAR DETECCION" button (Sorry, its in spanish). Once the program has a target frequency to cancel, you can then use the "ACTIVAR CANCELACION" button to start the cancellation process for the tone, which will generate a counter-tone on a speaker output sweeping all phases one by one till the amplitude of the source tone drops in the FFT. Effectively cancelling the tone on a fixed position in space.
 
 This work uses modified versions of the following libraries :
-(SWHear.py) by Scott Harden - Heavily Modified https://github.com/swharden/Python-GUI-examples
 
-(rpi_audio_levels.so) by Colin Guyon - C++ GPU_FFT wrapper for RASP-PI3 https://github.com/colin-guyon/rpi-audio-levels
+(SWHear.py) by Scott Harden - Heavily Modified 
+https://github.com/swharden/Python-GUI-examples
+
+(rpi_audio_levels.so) by Colin Guyon - C++ GPU_FFT wrapper for RASP-PI3 
+https://github.com/colin-guyon/rpi-audio-levels
 
 # To Run
 Clone files to the RPI3 on the same folder and run integrado.py. 
