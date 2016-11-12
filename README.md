@@ -1,9 +1,9 @@
 # RaspPI3-acoustic-pure-tone-canceling
 Raspberry3 turned into an acoustic pure-tone canceller. Using Python2.7
 
-This is just a final project for my Transforms subject. It aims to scan the audible spectrum for pure-tones using FFT, in order to produce a "counter tone" that will effectively cancel the source by finding the appropiate phase. The program will detect idle interfaces and start scanning the spectrum from the start.
+This is just a final project for my Transforms subject. It aims to scan the audible spectrum for pure-tones using FFT, in order to produce a "counter tone" that will effectively cancel the source tone by finding the appropiate phase, using the principle of acoustic interference. 
 
-Make your piano sound any key or simpply whistle. In order to identify a pure tone in the spectrum, click "INICIAR DETECCION" (Sorry its in spanish). Once the program has a frequency to cancel, you can then use the "ACTIVAR CANCELACION" button to start the cancellation process, which will reproduce all phases of the frequency till the amplitude of the source tone drops in the FFT.
+The program will detect idle audio card interfaces and start scanning the spectrum from the start. Make your piano sound any key or simpply whistle. In order to identify a pure tone in the spectrum, click "INICIAR DETECCION" button (Sorry its in spanish). Once the program has a frequency to cancel, you can then use the "ACTIVAR CANCELACION" button to start the cancellation process for the tone, which will reproduce on a speaker all phases of the frequency till the amplitude of the source tone drops in the FFT.
 
 #This work includes modified versions of the following libraries of other contributors:
 
@@ -26,7 +26,7 @@ PyQt
 
 # To Run
 Unpack to the RPI3 on the same folder and run integrado.py. 
-Uses Qt, should work on all graphical environments.
+Uses Qt, should work on all graphical environments. (Thanks Scott for posting how to build Qt interfaces for PyQt)
 
 * You should have a full-duplex sound card with a mic on ALSA device 0.
 * My device is a 2 dollar C-Media USB audio card.
