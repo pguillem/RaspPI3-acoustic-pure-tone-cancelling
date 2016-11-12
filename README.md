@@ -17,14 +17,15 @@ https://github.com/colin-guyon/rpi-audio-levels
 
 # To Run
 Clone files to the RPI3 on the same folder and run integrado.py. 
-Uses Qt, should work on all graphical environments. (Thanks Scott for posting how to build Qt interfaces for PyQt)
+Uses Qt, should work on all graphical environments.
 
 * You should have a full-duplex sound card with a mic on ALSA device 0.
 * My device is a 2 dollar C-Media USB audio card.
 * I configured ALSA so this device always reports as CARD0 - Device0, ignoring the internal BCM chip for audio.
+* You need a pure sine wave tone generator to thest it properly
 
 #Notes
 This is still work in progress
-The GPU_FFT function has not been yet implemented, but testing is underway.
+The GPU_FFT function has not been yet implemented, but testing is underway. Currently the code runs on numpy.fft()
 
 * Special thanks to Colin Guyon and Scott Harden for sharing their audio tools and previous work
