@@ -1,31 +1,19 @@
 # RaspPI3-acoustic-pure-tone-canceling
 Raspberry3 turned into an acoustic pure-tone canceller. Using Python2.7
 
-This is just a final project for my Transforms subject. It aims to scan the audible spectrum for pure-tones using FFT, in order to produce a "counter tone" that will effectively cancel the source tone by finding the appropiate phase, using the principle of acoustic interference. 
+This is just a final project for my Transforms subject. It aims to scan the audible spectrum for pure-tones using FFT, to later produce a "counter tone" that will effectively cancel the source tone in the same frequency by finding the appropiate phase, using the principle of acoustic interference. 
 
-The program will detect idle audio card interfaces and start scanning the spectrum from the start. Make your piano sound any key or simpply whistle. In order to identify a pure tone in the spectrum, click "INICIAR DETECCION" button (Sorry its in spanish). Once the program has a frequency to cancel, you can then use the "ACTIVAR CANCELACION" button to start the cancellation process for the tone, which will reproduce on a speaker all phases of the frequency till the amplitude of the source tone drops in the FFT.
+The program will detect any idle audio card interfaces and start scanning the spectrum from the start. Make your piano sound any key or simply whistle, the code will pick up the frequency. 
 
-#This work includes modified versions of the following libraries of other contributors:
+In order to focus the program on the dominant pure-tone in the spectrum, click the "INICIAR DETECCION" button (Sorry, its in spanish). Once the program has a target frequency to cancel, you can then use the "ACTIVAR CANCELACION" button to start the cancellation process for the tone, which will generate a counter-tone on a speaker output sweeping all phases one by one till the amplitude of the source tone drops in the FFT. Effectively cancelling the tone on a fixed position in space.
 
-(SWHear.py) by Scott Harden - Heavily Modified
-https://github.com/swharden/Python-GUI-examples
+This work uses modified versions of the following libraries :
+(SWHear.py) by Scott Harden - Heavily Modified https://github.com/swharden/Python-GUI-examples
 
-(rpi_audio_levels.so) by Colin Guyon - Fast GPU FFT lib for RPI3
-https://github.com/colin-guyon/rpi-audio-levels
-
-Depends on the following modules:
-pyaudio
-numpy
-math
-sys
-multiprocessing
-threading
-pylab
-scipy
-PyQt
+(rpi_audio_levels.so) by Colin Guyon - C++ GPU_FFT wrapper for RASP-PI3 https://github.com/colin-guyon/rpi-audio-levels
 
 # To Run
-Unpack to the RPI3 on the same folder and run integrado.py. 
+Clone files to the RPI3 on the same folder and run integrado.py. 
 Uses Qt, should work on all graphical environments. (Thanks Scott for posting how to build Qt interfaces for PyQt)
 
 * You should have a full-duplex sound card with a mic on ALSA device 0.
